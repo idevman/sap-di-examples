@@ -41,7 +41,7 @@ namespace Test.HandlerTests
                     Assert.IsTrue(i.ContainsKey("empID"));
                     int existingKey = int.Parse(i["empID"]);
                     Assert.IsTrue(existingKey > 0);
-                    Handler.Delete(sap, existingKey);
+                    Assert.IsTrue(Handler.Delete(sap, existingKey));
                 }
                 existing = Handler.LoadByPrefix(db, "SF-");
                 Assert.IsNotNull(existing);
