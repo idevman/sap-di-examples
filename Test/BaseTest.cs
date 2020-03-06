@@ -12,11 +12,6 @@ namespace Test
     {
 
         /// <summary>
-        /// Used to handle loaders
-        /// </summary>
-        protected ILoader Loader { get; set; }
-
-        /// <summary>
         /// Initialize connections
         /// </summary>
         public BaseTest()
@@ -25,6 +20,11 @@ namespace Test
             DBConnection.Database = "SBODemoMX";
             DBConnection.User = "sa";
             DBConnection.Password = "F41c0n12#";
+
+            SAPConnection.Server = "SAP";
+            SAPConnection.User = "manager";
+            SAPConnection.Password = "manager";
+            SAPConnection.DbServerType = SAPbobsCOM.BoDataServerTypes.dst_MSSQL2014;
         }
 
     }
